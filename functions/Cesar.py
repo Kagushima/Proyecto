@@ -9,10 +9,14 @@ def cesar_encrypt(texto, desplazamiento):
             if char.islower():
                 if desplazado > ord('z'):
                     desplazado -= 26
+                elif desplazado < ord('a'):
+                    desplazado += 26
                 resultado += chr(desplazado)
             elif char.isupper():
                 if desplazado > ord('Z'):
                     desplazado -= 26
+                elif desplazado < ord('A'):
+                    desplazado += 26
                 resultado += chr(desplazado)
         else:
             resultado += char
